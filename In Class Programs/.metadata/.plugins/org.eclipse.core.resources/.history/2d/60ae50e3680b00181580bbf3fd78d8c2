@@ -1,0 +1,35 @@
+
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class Flow_Of_Contol {
+
+	public static final double interest = 0.03; // 3% yearly interest 
+	public static final double penalty = 15.00;
+	
+	public static void main(String[] args) 
+	{
+		Scanner keyboard = new Scanner(System.in);
+		double balance = 0.0, newbalance = 0.0;
+		
+		System.out.print("Enter your current checking balance: ");
+		balance = keyboard.nextDouble();
+		
+		if (balance >= 0)
+		{
+			newbalance = ((balance*interest) / 12) + balance;
+		}
+		
+		else
+		{
+			
+			newbalance = balance - penalty;
+		}
+		
+		System.out.println("Your original balance: " + balance);
+		System.out.println("Your new balance: %.2f " + newbalance);
+		keyboard.close();
+	}
+
+}

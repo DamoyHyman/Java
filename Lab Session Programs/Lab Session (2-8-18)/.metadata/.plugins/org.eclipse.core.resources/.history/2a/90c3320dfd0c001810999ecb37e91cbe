@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Extend_Job_Offer 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner keyboard = new Scanner(System.in);
+		String ans = " ";
+		
+		System.out.println("\t Welcome to you job interview");
+		System.out.print("Do you have a college degree? (y/n): ");
+		ans = keyboard.nextLine();
+		
+		if (ans.equals("y"))
+		{
+			System.out.print("Do you know Java? (y/n): ");
+			ans = keyboard.nextLine();
+			
+			if (ans.equals("y"))
+			{
+				System.out.println("Here is our job offer");
+				System.out.println("We would like to hire you at an senior level position");
+			}
+			
+			else
+			{
+				System.out.println("Here is our job offer");
+				System.out.println("We would like to hire you at an entry level position");
+			}
+		}
+		
+		else
+		{
+			System.out.println("We cannot extend you a job offer at this time.");
+		}
+
+	}
+
+}

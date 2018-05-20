@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class BMI 
+{
+	public static final double inch_to_meter = 0.0254;
+
+	public static void main(String[] args) 
+	{
+		int feet = 0, inch = 0, pounds = 0;
+		double BMI = 0.0, kilograms = 0.0, meters = 0.0;
+		String group = " ";
+		
+		System.out.println("\tBMI Calculator");
+
+	}
+
+}

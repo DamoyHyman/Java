@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Compare_2_String {
+
+	public static void main(String[] args) 
+	{
+		Scanner keyboard = new Scanner(System.in);
+		String s1 = " ", s2 = " ";
+		
+		System.out.println("Enter two lines of text:");
+		s1 = keyboard.nextLine();
+		s2 = keyboard.nextLine();
+		
+		if (s1.equals(s2))
+			System.out.println("The two lines are equal.");
+		else 
+			System.out.println("The two lines are not equal.");
+		
+		if (s1.equalsIgnoreCase(s2))
+			System.out.println("The two lines are equal Ignore Case.");
+		else 
+			System.out.println("The two lines are not equal Ignore Case. ");
+		
+		keyboard.close();
+	}
+
+}

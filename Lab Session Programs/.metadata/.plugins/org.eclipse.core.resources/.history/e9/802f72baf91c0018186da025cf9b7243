@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class RatingScore 
+{
+	private String movieDescription;
+	private int maxRating;
+	private int rating;
+	Scanner keyboard = new Scanner(System.in);
+	
+	// Accessor Method
+	public int getRating()
+	{
+		return rating;
+	}
+	
+	public int getMaxRating() 
+	{
+		return maxRating;
+	}
+	
+	// Mutator Method
+	public void initialize(String movieDes, int maxR)
+	{
+		movieDescription = movieDes;
+		maxRating = maxR;
+	}
+}

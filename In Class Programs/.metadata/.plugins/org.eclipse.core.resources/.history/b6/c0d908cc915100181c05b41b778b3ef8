@@ -1,0 +1,39 @@
+
+public class Sts {
+
+	public static void main(String[] args) 
+	{
+		
+		String A = "abcdf";
+		String B = "cdabcdab";
+		System.out.println(solution(A,B));
+	}
+
+	public static int solution(String A, String B) 
+	{
+		String newS = A;
+		int A_index = A.indexOf(B.charAt(0));
+		int state = 1;
+		
+	
+		for (int i = 0; i < B.length(); i++)
+		{
+			if (B.charAt(i) == newS.charAt(A_index))
+			{
+				A_index++;
+			}
+			
+			if(A_index == newS.length())
+			{
+				newS += A; // append A again
+				
+				if(B.charAt(i + 1) == newS.charAt(A_index))
+					state++;
+				else 
+					return - 1;
+			}
+		}
+		return state;
+    }
+	
+}

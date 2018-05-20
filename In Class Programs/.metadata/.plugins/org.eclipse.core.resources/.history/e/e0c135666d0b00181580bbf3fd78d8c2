@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class BMI 
+{
+	public static final double inch_to_meter = 0.0254;
+
+	public static void main(String[] args) 
+	{
+		double feet = 0.0, inch = 0.0, BMI = 0.0;
+		int 
+		String group = " ";
+
+	}
+
+}

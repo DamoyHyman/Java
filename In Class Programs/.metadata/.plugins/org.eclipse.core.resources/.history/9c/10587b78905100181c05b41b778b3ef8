@@ -1,0 +1,44 @@
+
+public class Sts {
+
+	public static void main(String[] args) 
+	{
+		
+		String A = "abcd";
+		String B = "cdabcdab";
+		System.out.println(solution(A,B));
+	}
+
+	public static int solution(String A, String B) 
+	{
+		String newS = A;
+		int si = A.indexOf(B.charAt(0));
+		int state = 0;
+		
+	
+		for (int i = 0; i < B.length(); i++)
+		{
+			if (B.charAt(i) == newS.charAt(si))
+			{
+				si++;
+			}
+			
+			if (newS.charAt(si + 1) == 0)
+			{
+				newS = newS + A;
+				state++;
+				si++;
+			}
+			
+			/*else if (si == newS.length() - 1 && newS.charAt(si + 1) == 0)
+			{
+				newS = newS + A;
+				state++;
+			}*/
+			
+		}
+		
+		return state;
+		
+    }
+}

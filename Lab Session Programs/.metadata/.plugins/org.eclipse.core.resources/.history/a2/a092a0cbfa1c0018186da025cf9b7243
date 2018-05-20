@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class RatingScore 
+{
+	private String movieDescription;
+	private int maxRating;
+	private int rating;
+	Scanner keyboard = new Scanner(System.in);
+	
+	// Accessor Method
+	public int getRating()
+	{
+		return rating;
+	}
+	
+	public int getMaxRating() 
+	{
+		return maxRating;
+	}
+	
+	public String display()
+	{
+		return "Displaying the rating for the movie \n" +
+			   "The rating is " + rating + "/" + maxRating +
+			   " for " + movieDescription;
+	}
+	
+	// Mutator Method
+	public void initialize(String movieDes, int maxR)
+	{
+		movieDescription = movieDes;
+		maxRating = maxR;
+	}
+	
+	public void readRating() 
+	{
+		System.out.println("What is your rating for " + movieDescription);
+		System.out.print("Please enter an integer from 0 to " + maxRating + ": ");
+		rating = keyboard.nextInt();
+		
+		// Error checking for rating greater than maxRating or less than 0
+		while(rating > maxRating || rating < 0)
+		{
+			System.out.println("Invalid rating entered.");
+			System.out.print("Please enter an integer from 0 to " + maxRating + ": ");
+			rating = keyboard.nextInt();
+		}
+	}
+}

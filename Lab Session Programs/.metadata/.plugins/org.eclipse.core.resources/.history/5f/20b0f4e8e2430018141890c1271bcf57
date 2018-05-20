@@ -1,0 +1,40 @@
+/*Implement a program that can perform Binary Search on an integer array. Given an array
+  the program should be able to find the index of a given element. The Binary Search Algorithm
+  must be implemented recursively.
+	
+	Name: Damoy Hyman
+*/
+import java.util.Scanner;
+public class Q1 
+{
+	public static void main(String[] args)
+	{
+		int arr[] = {2, 3, 4, 10, 40};
+		int search = 0;
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.print("Given array: ");
+		print(arr);
+		
+		System.out.print("Search for: ");
+		search = keyboard.nextInt();
+
+	}
+	
+	public static int BinarySearch(int a[], int key)
+	{
+		int mid = (a.length - 1) / 2;
+	}
+	
+	public static void print(int a[])
+	{
+		System.out.print("[ ");
+		
+		for (int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i] + " ");
+		}
+		
+		System.out.println("]");
+	}
+}

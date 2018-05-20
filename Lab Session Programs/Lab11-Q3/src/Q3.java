@@ -1,0 +1,58 @@
+/*Implement a program that uses an Integer Array List. The program will prompt the user for
+how long the Array List is. The user will then fill up the Array List with integers. Then have the
+program call a sort method on the Array List to order the list from smallest to largest.
+
+Name: Damoy Hyman
+*/
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Q3 
+{
+
+	public static void main(String[] args) 
+	{
+		ArrayList<Integer> Al; 
+		Scanner keyboard = new Scanner(System.in);
+		int size = 0;
+		
+		System.out.print("How long is the list?: ");
+		size = keyboard.nextInt();
+		
+		// Initialize ArrayList to user size
+		Al = new ArrayList<Integer>();
+		
+		for(int i = 0; i < size; i++)
+		{
+			System.out.print("Enter the " + (i + 1) + "th element in the list: ");
+			int in = keyboard.nextInt();
+			
+			Al.add(in);
+		}
+		
+		System.out.println();
+		System.out.print("Before Sorting: ");
+		Print(Al);
+		
+		Collections.sort(Al);
+		System.out.print("After Sorting: ");
+		Print(Al);
+		
+		keyboard.close();
+		System.exit(0);
+	}
+	
+	public static void Print (ArrayList<Integer> a)
+	{
+		System.out.print("[ ");
+		
+		for(int i = 0; i < a.size(); i++)
+		{
+			System.out.print(a.get(i) + " ");
+		}
+		
+		System.out.println("]");
+	}
+
+}

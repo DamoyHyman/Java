@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Q1 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner keyboard = new Scanner(System.in);
+		int input = 0;
+		int absolute = 0;
+		String polarity = " ";
+		String parity = " ";
+		
+		System.out.print("Enter an integer: ");
+		input = keyboard.nextInt();
+		
+		if (input < 0)
+			parity = "negative number";
+		else 
+			parity = "positive number";
+		
+		if (input % 2 == 0)
+			polarity = "even number";
+		else
+			polarity = "odd number";
+		
+		
+		absolute = Math.abs(input);
+		
+		System.out.println(input + " is a " + parity + ", its absolute value is " + absolute + ", and " + absolute +
+						   " is an " + polarity);
+	}
+
+}

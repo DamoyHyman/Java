@@ -1,0 +1,15 @@
+public class RatingScore 
+{
+	private String movieDescription;
+	private int maxRating;
+	private int rating;
+	
+	// Accessor Method
+	
+	// Mutator Method
+	public void initialize(String movieDes, int maxR)
+	{
+		movieDescription = movieDes;
+		maxRating = maxR;
+	}
+}

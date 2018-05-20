@@ -1,0 +1,7 @@
+Count 1: 213
+Count 2: 1233432
+Count 3: 323342342
+Count 4: 32343423
+Count 5: 345
+Count 6: 434
+Count 7: 233432
